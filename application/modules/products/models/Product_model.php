@@ -18,4 +18,14 @@ class Product_model extends CI_Model{
   	return $this->db->insert('products', $data);
   }
 
+  public function edit($flag) {
+  	return $this->db->get_where('products', $flag);
+  }
+
+  public function update($flag, $data)
+  {
+  	$this->db->where($flag);
+	return $this->db->update('products', $data);
+  }
+
 }

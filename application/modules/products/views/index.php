@@ -61,3 +61,67 @@
 		</div>
 	</div>
 </div>
+
+<div class="modal fade bs-example-modal-lg" id="addModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width:500px;">
+        <div class="modal-content">
+
+            <div class="modal-header" style="background:cyan;">
+                <h4 class="modal-title" id="myModalLabel">Tambah Data</h4>
+            </div>
+            <div class="modal-body">
+            <form class="form-horizontal form-label-left" id="form" name="form">
+
+                    <div class="form-group">
+                      <label class="control-label col-sm-3 col-sm-3 col-xs-12">Kode Produk</label>
+                      <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input type="text" class="form-control" id="kode" name="kode" placeholder="kode produk" />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-3 col-sm-3 col-xs-12">Nama Produk</label>
+                      <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input type="text" class="form-control" id="nama" name="nama" placeholder="nama produk" />
+                      </div>
+                    </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-primary" id="save">Simpan</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-lg" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="width:500px;">
+        <div class="modal-content">
+
+            <div class="modal-header" style="background:cyan;">
+                <h4 class="modal-title" id="myModalLabel">Edit Data</h4>
+            </div>
+            <div class="modal-body">
+            <form class="form-horizontal form-label-left" id="form2" name="form2">
+
+                <div class="form-group">
+                  <label class="control-label col-sm-3 col-sm-3 col-xs-12">Kode Produk</label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="hidden" class="form-control" id="id_edit" name="id_edit" />
+                    <input type="text" class="form-control" id="code_edit" name="code_edit" placeholder="Kode Produk" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-3 col-sm-3 col-xs-12">Nama Produk</label>
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="text" class="form-control" id="name_edit" name="name_edit" placeholder="Nama Produk" />
+                  </div>
+                </div>
+            </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-primary" id="update">Simpan</button>
+            </div>
+        </div>
+    </div>
+</div>

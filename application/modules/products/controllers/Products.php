@@ -31,4 +31,22 @@ class Products extends CI_Controller{
 	$this->product_model->store($data);
   }
 
+  function edit($id) {
+  	$flag = ['id' => $id];
+
+	$product = $this->product_model->edit($flag)->row();
+
+	echo json_encode($product);
+  }
+
+  function update() {
+  	$flag = ['id' => $this->input->post('id_edit')];
+	$data = [
+		'code' => $this->input->post('code_edit'),
+		'name' => $this->input->post('name_edit'),
+	];
+
+	$this->product_model->update($flag, $data);
+  }
+
 }
