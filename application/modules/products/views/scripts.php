@@ -41,4 +41,16 @@
 		})
 	}
 
+	function del(id) {
+		if (confirm('Yakin menghapus data?')) {
+			$.ajax({
+				url: "<?= site_url(); ?>products/delete/" +id,
+				type: 'post',
+				success: function () {
+					location.reload();
+				}
+			})
+		}
+	}
+
 </script>

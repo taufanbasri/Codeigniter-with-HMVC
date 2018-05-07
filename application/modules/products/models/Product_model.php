@@ -28,4 +28,11 @@ class Product_model extends CI_Model{
 	return $this->db->update('products', $data);
   }
 
+  public function delete($flag)
+  {
+  	$this->db->where($flag);
+
+	return $this->db->delete('products');
+  }
+
 }

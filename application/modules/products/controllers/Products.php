@@ -49,4 +49,10 @@ class Products extends CI_Controller{
 	$this->product_model->update($flag, $data);
   }
 
+  function delete($id) {
+  	$flag = ['id' => $id];
+
+	$this->product_model->delete($flag);
+  }
+
 }
