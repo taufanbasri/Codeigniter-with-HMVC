@@ -18,6 +18,8 @@
 
     <!-- Custom Theme Style -->
     <link href="<?= base_url(); ?>assets/css/custom.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/dataTables.bootstrap.min.css">
   </head>
 
   <body class="nav-md">
@@ -214,7 +216,7 @@
       </div>
     </div>
 
-    <!-- jQuery -->
+	<!-- jQuery -->
     <script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="<?= base_url(); ?>assets/js/bootstrap.min.js"></script>
@@ -225,5 +227,9 @@
 
     <!-- Custom Theme Scripts -->
     <script src="<?= base_url(); ?>assets/js/custom.min.js"></script>
+
+	<!-- Data tables -->
+	<script type='text/javascript' src="<?php echo base_url(); ?>assets/js/jquery.dataTables.min.js"></script>
+	<script type='text/javascript' src="<?php echo base_url(); ?>assets/js/dataTables.bootstrap.min.js"></script>
   </body>
 </html>
