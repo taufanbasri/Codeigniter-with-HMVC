@@ -8,9 +8,14 @@ class Product_model extends CI_Model{
     parent::__construct();
   }
 
-  public function products()
+  public function all()
   {
   	return $this->db->get('products');
+  }
+
+  public function store($data)
+  {
+  	return $this->db->insert('products', $data);
   }
 
 }

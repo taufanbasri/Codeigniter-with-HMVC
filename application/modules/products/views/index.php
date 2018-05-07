@@ -13,8 +13,8 @@
 		    </tr>
 		</thead>
 		<tbody>
+			<?php $no = 1; ?>
 			<?php foreach ($datatables->result() as $row): ?>
-				<?php $no = 1; ?>
 				<tr>
 					<td><?php echo $no; ?></td>
 					<td><?php echo $row->code; ?></td>
@@ -28,4 +28,36 @@
 			<?php endforeach; ?>
 		</tbody>
 	</table>
+</div>
+
+<div class="modal fade bs-example-modal-lg" id="addModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-lg" style="width:500px;">
+		<div class="modal-content">
+
+			<div class="modal-header" style="background:cyan;">
+				<h4 class="modal-title" id="myModalLabel">Tambah Data</h4>
+            </div>
+			<div class="modal-body">
+				<form class="form-horizontal form-label-left" id="form" name="form">
+					<div class="form-group">
+	                  <label class="control-label col-sm-3 col-sm-3 col-xs-12">Kode Produk</label>
+	                  <div class="col-md-9 col-sm-9 col-xs-12">
+	                    <input type="text" class="form-control" id="code" name="code" placeholder="Kode Produk" />
+	                  </div>
+	                </div>
+
+					<div class="form-group">
+	                  <label class="control-label col-sm-3 col-sm-3 col-xs-12">Nama Produk</label>
+	                  <div class="col-md-9 col-sm-9 col-xs-12">
+	                    <input type="text" class="form-control" id="name" name="name" placeholder="Nama Produk" />
+	                  </div>
+	                </div>
+				</form>
+            </div>
+            <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-primary" id="save">Simpan</button>
+            </div>
+		</div>
+	</div>
 </div>

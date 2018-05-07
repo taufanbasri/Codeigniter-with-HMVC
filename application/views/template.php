@@ -231,5 +231,9 @@
 	<!-- Data tables -->
 	<script type='text/javascript' src="<?php echo base_url(); ?>assets/js/jquery.dataTables.min.js"></script>
 	<script type='text/javascript' src="<?php echo base_url(); ?>assets/js/dataTables.bootstrap.min.js"></script>
+
+	<?php if (isset($scripts)): ?>
+		<?php $this->load->view($scripts); ?>
+	<?php endif; ?>
   </body>
 </html>

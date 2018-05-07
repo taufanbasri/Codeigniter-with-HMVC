@@ -14,9 +14,21 @@ class Products extends CI_Controller{
   {
 	  $data['title'] = 'Data Produk';
 	  $data['content'] = 'index';
-	  $data['datatables'] = $this->product_model->products();
+	  $data['scripts'] = 'scripts';
+	  $data['datatables'] = $this->product_model->all();
 
 	  $this->load->view('template', $data);
+  }
+
+  function store()
+  {
+  	$data = [
+		'code' => $this->input->post('code'),
+		'name' => $this->input->post('name'),
+		'quantity' => 0
+	];
+
+	$this->product_model->store($data);
   }
 
 }
